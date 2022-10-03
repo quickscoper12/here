@@ -20,7 +20,12 @@ class WC_Dependencies {
 		if ( is_multisite() )
 			self::$active_plugins = array_merge( self::$active_plugins, get_site_option( 'active_sitewide_plugins', array() ) );
 	}
-
+	
+	/**
+	 * woocommerce_active_check function checks if woocommerce plugin is active
+	 *
+	 * @since 2.0.1
+	 */
 	public static function woocommerce_active_check() {
 
 		if ( ! self::$active_plugins ) self::init();
