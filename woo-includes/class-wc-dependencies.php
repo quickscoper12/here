@@ -7,7 +7,12 @@
 class WC_Dependencies {
 
 	private static $active_plugins;
-
+	
+	/**
+	 * Init function creates the list of active plugins
+	 *
+	 * @since 2.0.1
+	 */
 	public static function init() {
 
 		self::$active_plugins = (array) get_option( 'active_plugins', array() );
